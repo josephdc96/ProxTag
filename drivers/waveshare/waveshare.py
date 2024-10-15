@@ -3,10 +3,10 @@ import sys
 
 import PIL.ImageOps
 
-from ...drivers.display import Display
-from ...drivers.waveshare.models.waveshare_epd.epdbase import EPDBase
+from drivers.display import Display
+from drivers.waveshare.models.waveshare_epd.epdbase import EPDBase
 
-from ...drivers.waveshare.models.waveshare_epd.epdsoftware import EPD as EPDSOFTWARE
+from drivers.waveshare.models.waveshare_epd.epdsoftware import EPD as EPDSOFTWARE
 
 from PIL import Image,ImageDraw,ImageFont
 
