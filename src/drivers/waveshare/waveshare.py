@@ -4,14 +4,14 @@ import sys
 import PIL.ImageOps
 
 from src.drivers.display import Display
-from src.drivers.waveshare.lib.waveshare_epd.epdbase import EPDBase
+from src.drivers.waveshare.models.waveshare_epd.epdbase import EPDBase
 
-from src.drivers.waveshare.lib.waveshare_epd.epdsoftware import EPD as EPDSOFTWARE
+from src.drivers.waveshare.models.waveshare_epd.epdsoftware import EPD as EPDSOFTWARE
 
 from PIL import Image,ImageDraw,ImageFont
 
 picdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'waveshare'), 'pic')
-libdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'waveshare'), 'lib')
+libdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'waveshare'), 'models')
 
 if os.path.exists(libdir):
     sys.path.append(libdir)
@@ -41,7 +41,7 @@ class Waveshare(Display):
         match model.lower():
             case "epd2in13v4":
                 try:
-                    from src.drivers.waveshare.lib.waveshare_epd.epd2in13_V4 import EPD as EPD2IN13V4
+                    from src.drivers.waveshare.models.waveshare_epd.epd2in13_V4 import EPD as EPD2IN13V4
                     return EPD2IN13V4(lambda: self.go_up(), lambda: self.go_down(), lambda: self.select())
                 except ImportError:
                     print("Cannot initialize e-Ink display. Reverting to software emulation.")
