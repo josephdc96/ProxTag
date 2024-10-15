@@ -41,7 +41,7 @@ class Waveshare(Display):
         match model.lower():
             case "epd2in13v4":
                 try:
-                    from src.drivers.waveshare.models.waveshare_epd.epd2in13_V4 import EPD as EPD2IN13V4
+                    from drivers.waveshare.models.waveshare_epd.epd2in13_V4 import EPD as EPD2IN13V4
                     return EPD2IN13V4(lambda: self.go_up(), lambda: self.go_down(), lambda: self.select())
                 except ImportError:
                     print("Cannot initialize e-Ink display. Reverting to software emulation.")

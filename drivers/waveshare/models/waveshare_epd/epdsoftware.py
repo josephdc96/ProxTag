@@ -1,4 +1,4 @@
-from src.drivers.waveshare.models.waveshare_epd.epdbase import EPDBase
+from drivers.waveshare.models.waveshare_epd.epdbase import EPDBase
 from tkinter import *
 from PIL import ImageTk
 
