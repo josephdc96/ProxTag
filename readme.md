@@ -23,6 +23,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![GPL License][license-shield]][license-url]
+[![Buy me a coffee][coffee-shield]][coffee-url]
 
 
 
@@ -209,3 +210,5 @@ Distributed under the GPL3 License. See `LICENSE` for more information.
 [product-screenshot]: images/screenshot.png
 [Python]: https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python
 [Python-url]: https://python.org
+[coffee-shield]: https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black
+[coffee-url]: https://www.buymeacoffee.com/josephdc96
