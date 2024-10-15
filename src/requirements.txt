@@ -1,0 +1,13 @@
+certifi==2024.8.30
+charset-normalizer==3.4.0
+colorzero==2.0
+gpiozero==2.0.1; sys_platform=='linux'
+idna==3.10
+lgpio==0.2.2.0; sys_platform=='linux'
+numpy==2.1.2
+pillow==10.4.0
+requests==2.32.3
+rpi-lgpio==0.6; sys_platform=='linux'
+spidev==3.6; sys_platform=='linux'
+urllib3==2.2.3
+python-dotenv==0.21.1
