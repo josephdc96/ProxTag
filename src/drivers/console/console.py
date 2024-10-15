@@ -1,6 +1,6 @@
 from os import system, name
 
-from src.drivers.display import Display
+from ...drivers.display import Display
 
 
 def clear():
