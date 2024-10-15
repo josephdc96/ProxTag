@@ -10,7 +10,7 @@ from drivers.waveshare.models.waveshare_epd.epdsoftware import EPD as EPDSOFTWAR
 
 from PIL import Image,ImageDraw,ImageFont
 
-picdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'waveshare'), 'pic')
+picdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), '..'), 'images')
 libdir = os.path.join(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'waveshare'), 'models')
 
 if os.path.exists(libdir):
@@ -230,10 +230,10 @@ class Waveshare(Display):
     def draw_header(self):
         self.image = Image.new('1', (self.epd.height, self.epd.width), 255)
         self.draw = ImageDraw.Draw(self.image)
-        bmp = Image.open(os.path.join(picdir, 'proxmox.bmp'))
+        bmp = Image.open(os.path.join(picdir, 'ProxTag.bmp'))
         bmp = PIL.ImageOps.invert(bmp)
         self.draw.bitmap((4, 4), bmp)
-        self.draw.text((40, 6), 'Proxmox Manager', font=font24, fill=0)
+        self.draw.text((40, 6), 'ProxTag', font=font24, fill=0)
 
     def draw_scrollbar(self, num_vm):
         self.draw.rectangle([(self.epd.height - 8, 68), (self.epd.height - 6, self.epd.width - 12)], fill=255)
